@@ -9,8 +9,12 @@ class TestRunner:
 if __name__ == "__main__":
     test_runner = TestRunner()
 
-    test_runner.driver.get("https://www.skyscanner.pl/")
+    test_runner.driver.get("https://www.kayak.pl/")
 
-    el = test_runner.driver.find_element_by_id("footer-flags-root")
+    el = test_runner.driver.find_element_by_xpath("//*[contains(@id, 'soundsGood')]")
+    el.click()
+    if test_runner.driver.find_elements_by_xpath("//*[@title = 'Akceptuj']"):
+        el = test_runner.driver.find_elements_by_xpath("//*[@title = 'Akceptuj']")
+        el.click()
 
-    print(el.text)
+    print(el.id)
