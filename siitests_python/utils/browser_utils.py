@@ -1,4 +1,4 @@
-# import chromedriver_binary # Importing this exports chrome path to $PATH, below code will fail without this import
+import chromedriver_binary # Importing this exports chrome path to $PATH, below code will fail without this import
 from selenium import webdriver
 
 
