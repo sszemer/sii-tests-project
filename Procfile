@@ -1,1 +1,1 @@
-web: python python/siitests/app.py
+web: python -m siitests_python.app
