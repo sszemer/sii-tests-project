@@ -8,3 +8,9 @@ class TestRunner:
 
 if __name__ == "__main__":
     test_runner = TestRunner()
+
+    test_runner.driver.get("https://www.skyscanner.pl/")
+
+    el = test_runner.driver.find_element_by_id("footer-flags-root")
+
+    print(el.text)
