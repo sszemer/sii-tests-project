@@ -1,4 +1,4 @@
-from utils import browser_utils
+from .utils import browser_utils
 
 
 class TestRunner:
